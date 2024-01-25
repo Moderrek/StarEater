@@ -522,6 +522,21 @@ const RandomInRadius = (center, radius) => {
                     center.y + Math.sin(circle) * random_R);
 }
 
+const waits = [];
+const WaitFixed = (secs, callback) => {
+    waits.push({
+        timer: secs,
+        callback: callback,
+    });
+}
+const FixedTimerUpdate = () => {
+    for (const wait of waits) {
+        wait.timer -= fixedTime;
+        if (wait.timer <= 0) wait.callback();
+        waits.splice(waits.indexOf(wait), 1);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     EngineDebug(`Starting BencEngine ${ENGINE_VERSION}..`);
     ctx.imageSmoothingEnabled = true;
@@ -539,6 +554,7 @@ document.addEventListener('DOMContentLoaded', () => {
         EngineDebug("Fixed update interval: " + fixedUpdate);
         fixedTime = fixedUpdate / 1000;
         setInterval(() => {
+            FixedTimerUpdate();
             for (const gameObject of gameObjects) {
                 gameObject.FixedUpdate();
             }
