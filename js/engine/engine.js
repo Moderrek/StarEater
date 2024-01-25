@@ -380,6 +380,44 @@ const AddGameObject = (object) => {
 }
 
 /**
+ * 
+ * @param {({GameObject})} callback 
+ */
+const ForEachGameObject = (callback) => {
+    for (const gameObject of gameObjects) {
+        callback(gameObject);
+    }
+}
+
+/**
+ * 
+ * @param {*} type 
+ * @param {({GameObject})} callback 
+ */
+const ForEachGameObjectType = (type, callback) => {
+    if (typeof(type) !== "function") throw new Error("Parameter 'type' is invalid type!");
+    for (const gameObject of gameObjects) {
+        if (gameObject instanceof type) {
+            callback(gameObject);
+        }
+    }
+}
+
+/**
+ * 
+ * @param {GameObject} gameObj1 
+ * @param {GameObject} gameObj2
+ * @returns {boolean}
+ */
+const IsCollied = (gameObj1, gameObj2) => {
+    return 
+        gameObj1.position.x < gameObj2.position.x + gameObj2.width &&
+        gameObj1.position.x + gameObj1.width > gameObj2.position.x &&
+        gameObj1.position.y < gameObj2.position.y + gameObj2.height &&
+        gameObj1.position.y + gameObj1.height > gameObj2.position.y;
+}
+
+/**
  * Gets all game objects.
  * @returns {GameObject[]} The all game objects.
  */
