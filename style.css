@@ -9,12 +9,11 @@ body{
     /* background-color: rgb(51, 58, 101); */
     background-color: black;
     overflow: hidden;
+    background-color: rgb(18, 18, 18);
 }
 canvas{
     /* transform: scale(1.5, 1.5); */
-    border: 1px solid black;
     background-color: transparent;
-    border-radius: 50%;
     /* funny mode */
     /* animation: funny 2s linear infinite forwards; */
 }

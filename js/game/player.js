@@ -8,8 +8,11 @@ class Player extends GameObject {
     direction = Vec2.zero;
     boostTimer = 0;
 
+    Start() {
+
+    }
+
     Update() {
-        // TODO do poprawa movementu na skos
         this.direction = Vec2.zero;
         // top
         if (keys[87] || keys[38]) this.direction.y += -1;
@@ -36,7 +39,9 @@ class Player extends GameObject {
         ForEachColliedGameObjectByType(this, Booster, (collided) => {
             DeleteGameObject(collided);
             this.boostTimer = 3;
+            
         });
+
         this.boostTimer -= fixedTime;
     }
 
@@ -50,11 +55,11 @@ class Player extends GameObject {
     }
     
     CheckBorderCollision() {
-        if (this.position.x < 0) this.position.x = 0;
-        if (this.position.y < 0) this.position.y = 0;
-        if (this.position.x + this.width > canvas.width) this.position.x = canvas.width - this.width
-        if (this.position.y + this.height > canvas.height) this.position.y = canvas.height - this.height
-        if (Vec2.center.distance(Player.ref.position) >= SPAWN_RADIUS - Math.sin(timestamp / 1000 / 3) * 10 - 25){
+        if (this.center.x < 0) this.center.x = 0;
+        if (this.center.y < 0) this.center.y = 0;
+        if (this.center.x + this.width > canvas.width) this.center.x = canvas.width - this.width
+        if (this.center.y + this.height > canvas.height) this.center.y = canvas.height - this.height
+        if (Vec2.center.distance(Player.ref.center) >= SPAWN_RADIUS - Math.sin(timestamp / 1000 / 3) * 10 - this.width / 2){
             Player.ref.position = Vec2.center;
             gameScore = 0;
         }

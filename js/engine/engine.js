@@ -2,8 +2,8 @@ const ENGINE_VERSION = "v0.1";
 // Rendering data
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
-canvas.width = 600;
-canvas.height = 600;
+canvas.width = 750;
+canvas.height = 750;
 
 // Game core
 var timestamp = 0;

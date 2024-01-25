@@ -29,7 +29,7 @@ class Booster extends GameObject {
             TimeParamInverted(5, spawnDeltaTime) / 2,
             0
         ];
-         let color = FloatToColor(floats[0], floats[1], floats[2]);
+        let color = FloatToColor(floats[0], floats[1], floats[2]);
         let borderColor = FloatToColor(floats[0] - 0.1, floats[1] - 0.1, floats[2] - 0.1);
         DrawRect(this.position, this.width, this.height, {
             color: color,
@@ -45,19 +45,9 @@ class Booster extends GameObject {
         });
     }
 
-    CheckboosterCollect(p) {
-        if (this.position.x < p.position.x + p.width &&
-            this.position.x + this.width > p.position.x &&
-            this.position.y < p.position.y + p.height &&
-            this.position.y + this.height > p.position.y) {
-            
-            DeleteGameObject(p);
-        }
-    }
-
     Delete() {
-        gameScore += 1
-        AddGameObject(new Booster());
+        WaitFixed(RandomInt(3, 5), () => AddGameObject(new Booster()))
+
     }
 
     static get ref() {

@@ -1,5 +1,5 @@
 // Game settings
-const SPAWN_RADIUS = 300;
+const SPAWN_RADIUS = 350;
 // Game data
 let gameScore = 0;
 
