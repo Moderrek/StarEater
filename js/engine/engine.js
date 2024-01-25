@@ -410,7 +410,7 @@ const ForEachColliedGameObject = (origin, callback) => {
  * @param {({GameObject})} callback 
  */
 const ForEachColliedGameObjectByType = (origin, type, callback) => {
-    for (const gameObject of gameObject) {
+    for (const gameObject of gameObjects) {
         if (origin == gameObject) continue;
         if (!(gameObject instanceof type)) continue;
         if (!IsCollied(origin, gameObject)) continue;
