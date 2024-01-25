@@ -391,10 +391,39 @@ const ForEachGameObject = (callback) => {
 
 /**
  * 
+ * @param {GameObject} origin
+ * @param {({GameObject})} callback 
+ */
+const ForEachColliedGameObject = (origin, callback) => {
+    for (const gameObject of gameObject) {
+        if (origin == gameObject) continue;
+        if (IsCollied(origin, gameObject)) {
+            callback(gameObject);
+        }
+    }
+}
+
+/**
+ * 
+ * @param {GameObject} origin
  * @param {*} type 
  * @param {({GameObject})} callback 
  */
-const ForEachGameObjectType = (type, callback) => {
+const ForEachColliedGameObjectByType = (origin, type, callback) => {
+    for (const gameObject of gameObject) {
+        if (origin == gameObject) continue;
+        if (!(gameObject instanceof type)) continue;
+        if (!IsCollied(origin, gameObject)) continue;
+        callback(gameObject);
+    }
+}
+
+/**
+ * 
+ * @param {*} type 
+ * @param {({GameObject})} callback 
+ */
+const ForEachGameObjectByType = (type, callback) => {
     if (typeof(type) !== "function") throw new Error("Parameter 'type' is invalid type!");
     for (const gameObject of gameObjects) {
         if (gameObject instanceof type) {
