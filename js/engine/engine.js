@@ -539,7 +539,7 @@ const FixedTimerUpdate = () => {
     }
 }
 
-const Lerp = (x, y, alpha = 0.5) => x * (1 - a) + y * a;
+const Lerp = (x, y, alpha = 0.5) => x * (1 - alpha) + y * alpha;
 const RandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 document.addEventListener('DOMContentLoaded', () => {
