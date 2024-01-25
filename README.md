@@ -1,21 +1,26 @@
-# StarEater
-## TODO
-* Rysowanie tekstur
-* Zmienienie systemu pozycji na środek objektu
-* Dodanie kamery
-* Skalowanie rozdzielczości
-* System eventów
-* Obsługa obrotu rysowania
-* Biblioteka zapisu
-* Obsługa save'ów
-* Particle system
-* Rozdzielenie silnika na pliki
-* System dźwięków
-* Muzyka
-* Asteroidy
-* Dodanie sklepu
-* Eventy myszki i klawiatury
-* UI
-* Obsługa scen
-* Ustawienia graficzne
-* Tryb debugowania
+# TODO StarEater
+* ## Zmiany w silniku
+  * [ ] Zmienienie systemu pozycji na środek objektu
+  * [ ] System eventów
+  * [ ] Biblioteka zapisu
+  * [ ] Obsługa save'ów
+  * [ ] Rozdzielenie silnika na pliki
+  * [ ] Eventy myszki i klawiatury
+  * [ ] Obsługa scen
+* ## Grafika 
+  * [ ] UI
+  * [ ] Particle system
+  * [ ] Rysowanie tekstur
+  * [ ] Ustawienia graficzne
+  * [ ] Obsługa obrotu rysowania
+  * [ ] Skalowanie rozdzielczości
+  * [ ] drgania kamery
+  * [ ] poboczne efekty wizualne
+* ## Dźwięk
+  * [ ] System dźwięków
+  * [ ] Muzyka
+* ## Nowe funkcje
+* [ ] Asteroidy
+* [ ] Dodanie kamery
+* [ ] Tryb debugowania
+* [ ] Dodanie sklepu
