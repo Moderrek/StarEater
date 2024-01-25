@@ -32,7 +32,7 @@ TimeParam(2s) = 1
 
 /**
  * Parametr w czasie
- * @param {number} seconds Ilość sekund od powtórzenia wartości ITD JAK TO OISAĆ
+ * @param {number} seconds Ilość sekund od powtórzenia wartości ITD JAK TO OPISAĆ
  * @returns 0-1
  */
 const TimeParam = (seconds = 1, time = timestamp) => {
