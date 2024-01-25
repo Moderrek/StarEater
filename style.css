@@ -1,0 +1,32 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    /* background-color: rgb(51, 58, 101); */
+    background-color: black;
+    overflow: hidden;
+}
+canvas{
+    /* transform: scale(1.5, 1.5); */
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+    /* funny mode */
+    /* animation: funny 2s linear infinite forwards; */
+}
+#pkt{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@keyframes funny {
+    0% {transform: rotate(0deg);
+        transform: scale(1);
+    }
+    100% {transform: rotate(360deg);
+        transform: scale(1);
+    }
+}
