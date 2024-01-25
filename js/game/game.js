@@ -16,13 +16,13 @@ class StaticGameObject extends GameObject {
 }
 
 function onStart() {
-    AddGameObject(new Board());
-    
-    AddGameObject(new Player());
+    AddGameObject(Board);
+    AddGameObject(Booster)
+    AddGameObject(Player);
 
     for (let i = 0; i < 15; i += 1) {
         setTimeout(() => {
-            AddGameObject(new Point());
+            AddGameObject(Point);
         }, Math.random() * 8000);
     }
 

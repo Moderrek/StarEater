@@ -1,7 +1,7 @@
 class Player extends GameObject {
     width = 25;
     height = 25;
-    speed = 350;
+    speed = 200;
     color = 'lightblue';
     mass = 0;
     direction = Vec2.zero;
@@ -25,8 +25,12 @@ class Player extends GameObject {
 
         this.CheckBorderCollision();
 
-        FindGameObjectsByType(Point).forEach((point) => {
-            this.CheckPointCollect(point);
+        ForEachColliedGameObjectByType(this, Point, function callback(collided) {
+            DeleteGameObject(collided);
+            gameScore += 1;
+        });
+        ForEachColliedGameObjectByType(this, Booster, function callback(collided) {
+            DeleteGameObject(collided);
         });
     }
 
@@ -63,7 +67,23 @@ class Player extends GameObject {
         }
 
     }
+    CheckBoosterCollect(Booster) {
+        if (this.position.x < Booster.position.x + Booster.width &&
+            this.position.x + this.width > Booster.position.x &&
+            this.position.y < Booster.position.y + Booster.height &&
+            this.position.y + this.height > Booster.position.y) {
+            DeleteGameObject(Booster);
+            BoostSpeedUp()
+            // AddGameObject(new Point());
+            // AddGameObject(new Player());
 
+            //this.position = Vec2.center
+        }
+
+    }
+    BoostSpeedUp(){
+        this.speed += 50;
+    }
     static get ref() {
         return FindGameObjectByType(Player);
     }
