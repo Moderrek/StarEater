@@ -532,8 +532,10 @@ const WaitFixed = (secs, callback) => {
 const FixedTimerUpdate = () => {
     for (const wait of waits) {
         wait.timer -= fixedTime;
-        if (wait.timer <= 0) wait.callback();
-        waits.splice(waits.indexOf(wait), 1);
+        if (wait.timer <= 0) {
+            wait.callback();
+            waits.splice(waits.indexOf(wait), 1);
+        }
     }
 }
 
