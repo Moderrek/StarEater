@@ -410,8 +410,7 @@ const ForEachGameObjectType = (type, callback) => {
  * @returns {boolean}
  */
 const IsCollied = (gameObj1, gameObj2) => {
-    return 
-        gameObj1.position.x < gameObj2.position.x + gameObj2.width &&
+    return gameObj1.position.x < gameObj2.position.x + gameObj2.width &&
         gameObj1.position.x + gameObj1.width > gameObj2.position.x &&
         gameObj1.position.y < gameObj2.position.y + gameObj2.height &&
         gameObj1.position.y + gameObj1.height > gameObj2.position.y;
