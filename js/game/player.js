@@ -1,10 +1,12 @@
 class Player extends GameObject {
     width = 25;
     height = 25;
-    speed = 200;
+    speed = 100;
+    boostSpeed = 250;
     color = 'lightblue';
     mass = 0;
     direction = Vec2.zero;
+    boostTimer = 0;
 
     Update() {
         // TODO do poprawa movementu na skos
@@ -20,18 +22,22 @@ class Player extends GameObject {
     }
 
     FixedUpdate() {
+        let speed = this.boostTimer > 0 ? this.boostSpeed : this.speed;
+
         // Move player in direction
-        this.translate(this.direction.normalized.multiply(this.speed * fixedTime));
+        this.translate(this.direction.normalized.multiply(speed * fixedTime));
 
         this.CheckBorderCollision();
-
-        ForEachColliedGameObjectByType(this, Point, function callback(collided) {
+        //sprawdzanie kolizji
+        ForEachColliedGameObjectByType(this, Point, (collided) => {
             DeleteGameObject(collided);
             gameScore += 1;
         });
-        ForEachColliedGameObjectByType(this, Booster, function callback(collided) {
+        ForEachColliedGameObjectByType(this, Booster, (collided) => {
             DeleteGameObject(collided);
+            this.boostTimer = 3;
         });
+        this.boostTimer -= fixedTime;
     }
 
     Draw() {
@@ -53,37 +59,8 @@ class Player extends GameObject {
             gameScore = 0;
         }
     }
-    CheckPointCollect(p) {
-        if (this.position.x < p.position.x + p.width &&
-            this.position.x + this.width > p.position.x &&
-            this.position.y < p.position.y + p.height &&
-            this.position.y + this.height > p.position.y) {
-            DeleteGameObject(p);
-            document.getElementById("pkt").innerHTML = `${gameScore} pkt!`
-            // AddGameObject(new Point());
-            // AddGameObject(new Player());
 
-            //this.position = Vec2.center
-        }
-
-    }
-    CheckBoosterCollect(Booster) {
-        if (this.position.x < Booster.position.x + Booster.width &&
-            this.position.x + this.width > Booster.position.x &&
-            this.position.y < Booster.position.y + Booster.height &&
-            this.position.y + this.height > Booster.position.y) {
-            DeleteGameObject(Booster);
-            BoostSpeedUp()
-            // AddGameObject(new Point());
-            // AddGameObject(new Player());
-
-            //this.position = Vec2.center
-        }
-
-    }
-    BoostSpeedUp(){
-        this.speed += 50;
-    }
+  
     static get ref() {
         return FindGameObjectByType(Player);
     }
