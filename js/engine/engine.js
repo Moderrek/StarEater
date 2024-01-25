@@ -539,6 +539,9 @@ const FixedTimerUpdate = () => {
     }
 }
 
+const Lerp = (x, y, alpha = 0.5) => x * (1 - a) + y * a;
+const RandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 document.addEventListener('DOMContentLoaded', () => {
     EngineDebug(`Starting BencEngine ${ENGINE_VERSION}..`);
     ctx.imageSmoothingEnabled = true;
