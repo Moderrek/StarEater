@@ -1,0 +1,4 @@
+[submodule "HWGL"]
+	path = HWGL
+	url = https://github.com/HegemonStudio/HWGL
+	branch = main
