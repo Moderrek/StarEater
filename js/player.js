@@ -35,6 +35,7 @@ class Player extends GameObject {
         ForEachColliedGameObjectByType(this, Point, (collided) => {
             DeleteGameObject(collided);
             gameScore += 1;
+            document.getElementById("pkt").innerHTML = `${gameScore}pkt!`;
         });
         ForEachColliedGameObjectByType(this, Booster, (collided) => {
             DeleteGameObject(collided);

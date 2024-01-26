@@ -73,7 +73,6 @@ class Point extends GameObject {
     }
 
     Delete() {
-        gameScore += 1
         AddGameObject(new Point());
     }
 

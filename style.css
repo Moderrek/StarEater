@@ -7,11 +7,11 @@ body{
     flex-direction: column;
     margin: 0;
     /* background-color: rgb(51, 58, 101); */
-    background-color: black;
+    background-color: #010203;
     overflow: hidden;
-    background-color: rgb(18, 18, 18);
 }
 canvas{
+    border-radius: 50%;
     /* transform: scale(1.5, 1.5); */
     background-color: transparent;
     /* funny mode */
@@ -28,4 +28,7 @@ canvas{
     100% {transform: rotate(360deg);
         transform: scale(1);
     }
+}
+span{
+    color:  white;
 }

@@ -4,7 +4,7 @@
   * [ ] System eventów
   * [ ] Biblioteka zapisu
   * [ ] Obsługa save'ów
-  * [ ] Rozdzielenie silnika na pliki
+  * [x] Rozdzielenie silnika na pliki
   * [ ] Eventy myszki i klawiatury
   * [ ] Obsługa scen
 * ## Grafika 
@@ -20,7 +20,7 @@
   * [ ] System dźwięków
   * [ ] Muzyka
 * ## Nowe funkcje
-* [ ] Asteroidy
-* [ ] Dodanie kamery
-* [ ] Tryb debugowania
-* [ ] Dodanie sklepu
+  * [ ] Asteroidy
+  * [ ] Dodanie kamery
+  * [ ] Tryb debugowania
+  * [ ] Dodanie sklepu
