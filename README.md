@@ -2,7 +2,7 @@
 * ## Zmiany w silniku
   * [ ] Zmienienie systemu pozycji na środek objektu
   * [ ] System eventów
-  * [ ] Biblioteka zapisu
+  * [ ] Biblioteka zapisu 
   * [ ] Obsługa save'ów
   * [x] Rozdzielenie silnika na pliki
   * [ ] Eventy myszki i klawiatury
@@ -13,7 +13,7 @@
   * [ ] Rysowanie tekstur
   * [ ] Ustawienia graficzne
   * [ ] Obsługa obrotu rysowania
-  * [ ] Skalowanie rozdzielczości
+  * [ ] Skalowanie rozdzielczości (In progress)
   * [ ] drgania kamery
   * [ ] poboczne efekty wizualne
 * ## Dźwięk
