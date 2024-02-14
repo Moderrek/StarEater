@@ -1,3 +1,7 @@
+# StarEater
+```sh
+git clone https://github.com/HegemonStudio/StarEater.git --recurse-submodules
+```
 # TODO StarEater
 * ## Zmiany w silniku
   * [ ] Zmienienie systemu pozycji na środek objektu
