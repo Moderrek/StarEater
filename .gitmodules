@@ -1,7 +1,0 @@
-[submodule "HWGL"]
-	path = HWGL
-	url = https://github.com/HegemonStudio/HWGL
-	branch = main
-[submodule "JSGL"]
-	path = JSGL
-	url = https://github.com/Moderrek/JSGL
