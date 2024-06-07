@@ -33,7 +33,13 @@ W momencie kolizji gwiazd łączą się w większa gwiazdę _(nadal zapewniają 
 
 ## 📸 Zrzuty ekranu
 
-![Game Visualization](https://raw.githubusercontent.com/HegemonStudio/StarEater/main/start.gif)
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/HegemonStudio/StarEater/main/start.gif" width="345px" height="345px">
+
+<img src="https://github.com/Moderrek/StarEater/assets/16192262/97bfb682-ffd3-473a-9ab7-641fa22ab2f8" width="315px" height="345px">
+
+</div>
 
 ## 🕹️ Elementy w grze:
 * **Animowane** **matematycznie**
