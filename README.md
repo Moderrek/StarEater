@@ -48,16 +48,15 @@ W momencie kolizji gwiazd łączą się w większa gwiazdę _(nadal zapewniają 
 
 ## ⏳ Czas rzeczywisty
 
-### *Update*
-Funkcja wywoływana co klatkę. Wykorzystywana jest do rysowania obiektów. Tak jak animacje itp. Podczas obliczeń pod uwagę wzięta jest *deltaTime*. *deltaTime* = *czas od poprzedniej klatki*.
+### ✏️ *Update*
+Funkcja wywoływana co klatkę. Wykorzystywana jest do **rysowania** obiektów. Tak jak animacje itp. Podczas obliczeń pod uwagę wzięta jest $deltaTime$. $deltaTime$ = *czas od poprzedniej klatki*.
 
-### *FixedUpdate*
+### ⚛ *FixedUpdate*
 Funkcja wywoływana co stały czas.
 
-Interwał *FixedUpdate* jest mierzony na początku wczytania symulacji. Ilość milisekund pomiędzy pustymi klatkami zawsze będzie najmniejszym możliwym opóźnieniem równym *1000ms/Hz monitora* Dla 60Hz co 16ms, Dla 240Hz 4ms.
+Interwał *FixedUpdate* jest mierzony na początku wczytania symulacji. Ilość milisekund pomiędzy pustymi klatkami zawsze będzie najmniejszym możliwym opóźnieniem równym $1000ms/Hz$ monitora Dla 60Hz co 16ms, Dla 240Hz 4ms.
 
-*const fixedTime* = *1000/Hz*
-
+$fixedTime = (1000 / Hz)$
 
 FixedUpdate używany jest do przeprowadzania symulacji grawitacji.
 
