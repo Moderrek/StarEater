@@ -1,6 +1,6 @@
 # 🌠 [Star Eater](https://ckziucodefest.pl/p/moderr/star-eater)
 
-Mini-gra **Star Eater** polegająca na łapaniu punkcików (gwiazd) jako gracz, które poruszają według [prawa powszechnego ciążenia](https://pl.wikipedia.org/wiki/Prawo_powszechnego_ci%C4%85%C5%BCenia).   
+Mini-gra **Star Eater** polegająca na łapaniu punkcików _(gwiazd)_, które poruszają się według [prawa powszechnego ciążenia](https://pl.wikipedia.org/wiki/Prawo_powszechnego_ci%C4%85%C5%BCenia) symulowanego w grze.
 
 Zagraj w grę [**TUTAJ**](https://moderrek.github.io/StarEater/)
 
@@ -10,11 +10,11 @@ Aby poruszać graczem (błękitnym kwadratem) należy poruszać się za pomocą 
 
 Gracz poprzed poruszanie się może zbierać _gwiazdy_, które zapewniają mu dodatkowy punkt
 
-| Klawisz | Akcja        |
-| ------- | ------------ |
-| ←, A    | Ruch w lewo  |
-| ↑, W    | Ruch w góre  |
-| ↓, S    | Ruch w dół   |
+| Klawisz | Akcja         |
+| ------- | ------------- |
+| ←, A    | Ruch w lewo   |
+| ↑, W    | Ruch w góre   |
+| ↓, S    | Ruch w dół    |
 | ➝, D    | Ruch w prawo |
 
 ### 🚀 Doładowanie
@@ -60,3 +60,7 @@ Interwał *FixedUpdate* jest mierzony na początku wczytania symulacji. Ilość 
 
 
 FixedUpdate używany jest do przeprowadzania symulacji grawitacji.
+
+## 🤝 Podziękowanie
+
+Chciałem **bardzo podziękować** wszystkim, którzy zagłosowali na mnie ([CKZiU CodeFest](https://ckziucodefest.pl/)). Dziękuje ✨
