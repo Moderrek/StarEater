@@ -1,7 +1,7 @@
 class Board extends GameObject {
     Draw() {
         const radius =  SPAWN_RADIUS + 10 + Math.abs(Math.sin(timestamp / 1000 / 3)) * 5;
-        const radius_border = 10 //+ Math.sin(timestamp / 1000) * 5;
+        const radius_border = 10
         const delay = 10000;
         const size = Clamp(timestamp, 0, delay) / delay;
         // Ring

@@ -8,10 +8,6 @@ class Player extends GameObject {
     direction = Vec2.zero;
     boostTimer = 0;
 
-    Start() {
-
-    }
-
     Update() {
         this.direction = Vec2.zero;
         // top
@@ -25,22 +21,27 @@ class Player extends GameObject {
     }
 
     FixedUpdate() {
+        // Calculate speed
         let speed = this.boostTimer > 0 ? this.boostSpeed : this.speed;
 
         // Move player in direction
         this.translate(this.direction.normalized.multiply(speed * fixedTime));
 
         this.CheckBorderCollision();
-        //sprawdzanie kolizji
+        // Check collision with points
         ForEachColliedGameObjectByType(this, Point, (collided) => {
+            // Delete collected point
             DeleteGameObject(collided);
-            gameScore += 1;
-            document.getElementById("pkt").innerHTML = `${gameScore}pkt!`;
+            // Calculate points earned by collecting the point
+            const earnedPoints = Math.ceil(collided.mass / 10);
+            gameScore += earnedPoints;
+            // Update points counter on the screen
+            document.getElementById("pkt").innerHTML = `${gameScore} points`;
         });
+        // Check collision with boosters
         ForEachColliedGameObjectByType(this, Booster, (collided) => {
             DeleteGameObject(collided);
             this.boostTimer = 3;
-            
         });
 
         this.boostTimer -= fixedTime;
@@ -62,7 +63,10 @@ class Player extends GameObject {
         if (this.center.y + this.height > canvas.height) this.center.y = canvas.height - this.height
         if (Vec2.center.distance(Player.ref.center) >= SPAWN_RADIUS - Math.sin(timestamp / 1000 / 3) * 10 - this.width / 2){
             Player.ref.position = Vec2.center;
+            // Reset points counter
             gameScore = 0;
+            // Update points counter on the screen
+            document.getElementById("pkt").innerHTML = `${gameScore} points`;
         }
     }
 

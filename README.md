@@ -1,5 +1,8 @@
 # 🌠 [Star Eater](https://ckziucodefest.pl/p/moderr/star-eater)
 
+![GitHub License](https://img.shields.io/github/license/Moderrek/StarEater)
+
+
 Mini-gra **Star Eater** polegająca na łapaniu punkcików _(gwiazd)_, które poruszają się według [prawa powszechnego ciążenia](https://pl.wikipedia.org/wiki/Prawo_powszechnego_ci%C4%85%C5%BCenia) symulowanego w grze.
 
 Zagraj w grę [**TUTAJ**](https://moderrek.github.io/StarEater/)
@@ -27,7 +30,13 @@ Doładowanie zapewnia **przyspieszenie prędkości gracza** na określony czas.
 
 Gwiazdy to elementy gry, które gracz ma za zadanie zbierać (pochłaniać, niezaleznie od ich wielkości).
 
-Każda zjedzona gwiazda zapewnia **+1 pkt**
+Każda zjedzona gwiazda zapewnia $\lceil \frac{masa}{10} \rceil$ pkt
+
+$\lceil \frac{m}{10} \rceil, m = 0 \implies  pkt = 0$  
+$\lceil \frac{m}{10} \rceil, m = 1 \implies  pkt = 1$  
+$\lceil \frac{m}{10} \rceil, m = 10.1 \implies  pkt = 2$  
+$\lceil \frac{m}{10} \rceil, m = 100 \implies  pkt = 10$  
+
 
 W momencie kolizji gwiazd łączą się w większa gwiazdę _(nadal zapewniają **1 pkt**, który łatwiej zdobyć)_
 
@@ -35,7 +44,7 @@ W momencie kolizji gwiazd łączą się w większa gwiazdę _(nadal zapewniają 
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/HegemonStudio/StarEater/main/start.gif" width="345px" height="345px">
+<img src="./images/start.gif" width="345px" height="345px">
 
 <img src="https://github.com/Moderrek/StarEater/assets/16192262/97bfb682-ffd3-473a-9ab7-641fa22ab2f8" width="315px" height="345px">
 

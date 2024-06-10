@@ -21,18 +21,19 @@ const BASIC_SHADOW = {
 }
 
 /*
-czas = 1000ms
+time = 1000ms
 TimeParam(1s) = 1
-czas = 2000ms
+time = 2000ms
 TimeParam(1s) = 1
 
-czas = 2000ms
+time = 2000ms
 TimeParam(2s) = 1
 */
 
 /**
- * Parametr w czasie
- * @param {number} seconds Ilość sekund od powtórzenia wartości ITD JAK TO OPISAĆ
+ * Time parameter
+ * @param {number} seconds Amount of seconds to repeat value
+ * @param {number} time Current time
  * @returns 0-1
  */
 const TimeParam = (seconds = 1, time = timestamp) => {
@@ -48,8 +49,9 @@ TimeParam(2s) = 0
 */
 
 /**
- * Parametr w czasie
- * @param {number} seconds Ilość sekund od powtórzenia wartości ITD JAK TO OISAĆ
+ * Time parameter inverted
+ * @param {number} seconds Amount of seconds to repeat value
+ * @param {number} time Current time
  * @returns 0-1
  */
 const TimeParamInverted = (seconds = 1, time = timestamp) => {

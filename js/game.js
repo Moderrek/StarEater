@@ -16,17 +16,19 @@ class StaticGameObject extends GameObject {
 }
 
 function onStart() {
+    // Instantiate basic game objects
     AddGameObject(Board);
     AddGameObject(Booster)
     AddGameObject(Player);
 
+    // Instantiate points with randomly delay
     for (let i = 0; i < 15; i += 1) {
         setTimeout(() => {
             AddGameObject(Point);
         }, Math.random() * 8000);
     }
 
-    // Star
+    // Center of the game
     let center = new StaticGameObject();
     center.properties.fill = false;
     center.mass = 300000;
@@ -52,5 +54,5 @@ function onStart() {
             if (gameObject instanceof Player) continue;
             gameObject.translate(gameObject.velocity);
         }
-    }, 10);
+    }, 16);
 }

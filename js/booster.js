@@ -12,8 +12,6 @@ class Booster extends GameObject {
         this.velocity = Vec2.of(0, -0.5);
     }
 
-
-
     FixedUpdate() {
         FindGameObjectsByType(Booster).forEach((Bst) => {
             if (this == Bst) return;
@@ -22,15 +20,17 @@ class Booster extends GameObject {
     }
 
     Draw() {
+        // Time since spawn
         let spawnDeltaTime = this.spawnTime - timestamp;
-        // let floats = [Math.sin(spawnDeltaTime / 2000), Math.cos(spawnDeltaTime / 2000), Math.sin(spawnDeltaTime / 2000)];
+        // Color changing over time
         let floats = [
             TimeParam(2, spawnDeltaTime),
             TimeParamInverted(5, spawnDeltaTime) / 2,
             0
         ];
+        // Convert floats to color
         let color = FloatToColor(floats[0], floats[1], floats[2]);
-        let borderColor = FloatToColor(floats[0] - 0.1, floats[1] - 0.1, floats[2] - 0.1);
+        // Draw rectangle
         DrawRect(this.position, this.width, this.height, {
             color: color,
             alpha: 1,
@@ -46,8 +46,8 @@ class Booster extends GameObject {
     }
 
     Delete() {
+        // When booster is collected delete it and spawn new one after random time
         WaitFixed(RandomInt(3, 5), () => AddGameObject(new Booster()))
-
     }
 
     static get ref() {

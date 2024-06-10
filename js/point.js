@@ -22,12 +22,6 @@ class Point extends GameObject {
         this.translate(-delta / 2, -delta / 2);
     }
 
-    Update() {
-        //if (Vec2.center.distance(this.position) > SPAWN_RADIUS) this.position = RandomInRadius(Vec2.center, SPAWN_RADIUS - this.width);
-        // console.log(this.velocity);
-        // this.translate(this.velocity);
-    }
-
     FixedUpdate() {
         FindGameObjectsByType(Point).forEach((point) => {
             if (this == point) return;
@@ -37,7 +31,6 @@ class Point extends GameObject {
 
     Draw() {
         let spawnDeltaTime = this.spawnTime - timestamp;
-        // let floats = [Math.sin(spawnDeltaTime / 2000), Math.cos(spawnDeltaTime / 2000), Math.sin(spawnDeltaTime / 2000)];
         let floats = [
             TimeParam(2, spawnDeltaTime),
             TimeParamInverted(2, spawnDeltaTime),
