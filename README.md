@@ -38,7 +38,7 @@ $\lceil \frac{m}{10} \rceil, m = 10.1 \implies  pkt = 2$
 $\lceil \frac{m}{10} \rceil, m = 100 \implies  pkt = 10$  
 
 
-W momencie kolizji gwiazd łączą się w większa gwiazdę _(nadal zapewniają **1 pkt**, który łatwiej zdobyć)_
+W momencie kolizji gwiazd łączą się w większa gwiazdę
 
 ## 📸 Zrzuty ekranu
 
