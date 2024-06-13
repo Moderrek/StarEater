@@ -82,6 +82,8 @@ $fixedTime = (1000 / Hz)$
 
 FixedUpdate używany jest do przeprowadzania symulacji grawitacji.
 
+![Prawo powszechnego ciażenia](https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQzDIzzhUH2xZEuXPL3sMne3ajcBOm9-ctoW3IuFWU7YjoCHtY9_2jJggAKv97NCI2-)
+
 ## 🤝 Podziękowanie
 
 Chciałem **bardzo podziękować** wszystkim, którzy zagłosowali na mnie ([CKZiU CodeFest](https://ckziucodefest.pl/)). Dziękuje ✨
