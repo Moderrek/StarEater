@@ -1,11 +1,34 @@
-# 🌠 [Star Eater](https://ckziucodefest.pl/p/moderr/star-eater)
+<div align="center">
+  <h1>🌠 Star Eater</h1>
 
 ![GitHub License](https://img.shields.io/github/license/Moderrek/StarEater)
+![CKZiU CodeFest24 Winner](https://img.shields.io/badge/CKZIU_CODEFEST_24-WINNER-gold)
+
+  
+</div>
 
 
 Mini-gra **Star Eater** polegająca na łapaniu punkcików _(gwiazd)_, które poruszają się według [prawa powszechnego ciążenia](https://pl.wikipedia.org/wiki/Prawo_powszechnego_ci%C4%85%C5%BCenia) symulowanego w grze.
 
 Zagraj w grę [**TUTAJ**](https://moderrek.github.io/StarEater/)
+
+## 📋 Spis treści
+* [📸 Zrzuty ekranu](?tab=readme-ov-file#-zrzuty-ekranu)
+* Zasady gry
+  - [🚶🏽‍♂️ Poruszanie się](?tab=readme-ov-file#%EF%B8%8F-poruszanie-się)
+  - [✨ Gwiazdy (punkty)](?tab=readme-ov-file#-gwiazdy)
+  - [🚀 Doładowanie](?tab=readme-ov-file#-doładowanie)
+* [⚙️ Symulacja](?tab=readme-ov-file#-zrzuty-ekranu)
+
+## 📸 Zrzuty ekranu
+
+<div align="center">
+
+<img src="./images/start.gif" width="345px" height="345px">
+
+<img src="https://github.com/Moderrek/StarEater/assets/16192262/97bfb682-ffd3-473a-9ab7-641fa22ab2f8" width="315px" height="345px">
+
+</div>
 
 ## 🚶🏽‍♂️ Poruszanie się
 
@@ -39,16 +62,6 @@ $\lceil \frac{m}{10} \rceil, m = 100 \implies  pkt = 10$
 
 
 W momencie kolizji gwiazd łączą się w większa gwiazdę
-
-## 📸 Zrzuty ekranu
-
-<div align="center">
-
-<img src="./images/start.gif" width="345px" height="345px">
-
-<img src="https://github.com/Moderrek/StarEater/assets/16192262/97bfb682-ffd3-473a-9ab7-641fa22ab2f8" width="315px" height="345px">
-
-</div>
 
 ## 🕹️ Elementy w grze:
 * **Animowane** **matematycznie**
